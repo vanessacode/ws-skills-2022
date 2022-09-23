@@ -6,30 +6,44 @@
 
 ## 🎓 J'ai compris et je peux expliquer
 
-- l'intéret de TypeScript dans l'IDE ❌ / ✔️
-- les types de bases ❌ / ✔️
-- comment et pourquoi étendre une interface ❌ / ✔️
-- les classes et les decorators ❌ / ✔️
+- l'intéret de TypeScript dans l'IDE ✔️
+Spécifie les erreurs dans le terminal
+
+- les types de bases ✔️
+Number, String, Boolean, Void
+
+- comment et pourquoi étendre une interface ✔️
+Les interfaces permettent au JavaScript de connaître la version typée des objets qui doivent être utilisés.
+
+- les classes et les decorators ✔️
+Un "Decorator" est un type spécial de déclaration qui peut être appliqué à des classes, des méthodes...
+Ce sont des fonctions préfixées par @decorator
 
 ## 💻 J'utilise
 
-### Un exemple personnel commenté ❌ / ✔️
+### Un exemple personnel commenté ✔️
+```
+@Entity()
+export class Wilder {
+  @PrimaryGeneratedColumn()
+  id: number;
 
-### Utilisation dans un projet ❌ / ✔️
+  @Column()
+  name: string;
 
-[lien github](...)
+  @Column()
+  description: string;
 
-Description :
+  @OneToMany(() => Grade, (grade) => grade.wilder)
+  grade: Grade[];
+}
+```
 
-### Utilisation en production si applicable❌ / ✔️
+### Utilisation dans un projet ✔️
 
-[lien du projet](...)
+### Utilisation en production si applicable❌
 
-Description :
-
-### Utilisation en environement professionnel ❌ / ✔️
-
-Description :
+### Utilisation en environement professionnel ❌
 
 ## 🌐 J'utilise des ressources
 
